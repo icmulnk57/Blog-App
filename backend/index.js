@@ -21,7 +21,12 @@ dotenv.config({path:'config/config.env'})
 app.use(express.json())
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(cookieParser());
-app.use(cors({origin:"http://localhost:5173",credentials:true}))
+const corsOptions = {
+    origin: ['http://localhost:5173', 'https://blog-app-g0mo.onrender.com'],
+    credentials: true,
+  };
+  
+  app.use(cors(corsOptions));
 
 
 //image upload
