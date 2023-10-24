@@ -21,7 +21,7 @@ dotenv.config({path:'config/config.env'})
 app.use(express.json())
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(cookieParser());
-app.use(cors({origin:"http://localhost:5173",credentials:true,methods: 'GET,PUT, PATCH, POST, DELETE',}))
+app.use(cors({origin:"https://65375e69e0affd296abd7794--dulcet-jelly-c19da1.netlify.app",credentials:true,methods: 'GET,PUT, PATCH, POST, DELETE',}))
 
 
 //image upload
