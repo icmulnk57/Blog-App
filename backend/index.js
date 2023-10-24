@@ -21,8 +21,10 @@ require('dotenv').config();
 app.use(express.json())
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(cookieParser());
-app.use(cors({origin:"http://localhost:5173",credentials:true,methods: 'GET,PUT, PATCH, POST, DELETE',}))
-
+app.use(cors({origin:"http://localhost:5173",credentials:true}))
+if(process.env.Node_ENV="production"){
+    app.use(express.static("frontend/build"))
+}
 
 //image upload
 
