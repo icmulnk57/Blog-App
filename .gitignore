@@ -10,3 +10,4 @@ frontend/.git
 frontend/.gitignore
 frontend/.gitattributes
 **/node_modules/
+**/config.env/
