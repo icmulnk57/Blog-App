@@ -14,7 +14,7 @@ const path=require('path')
 
 
 //configur dotenv file
-dotenv.config({path:'config/config.env'})
+require('dotenv').config();
 
 
 //middleware
