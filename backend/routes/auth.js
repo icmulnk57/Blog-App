@@ -7,12 +7,8 @@ const { register, login, logout, refetch } = require('../controllers/authControl
 const { model } = require('mongoose');
 
 //register
-router.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:5173');
-    res.header('Access-Control-Allow-Credentials', 'true');
-    // You can add other headers as needed
-    next();
-  });
+
+
 router.route("/register").post(register);
 router.route("/login").post(login);
 router.route("/logout").get(logout);
