@@ -21,24 +21,12 @@ require('dotenv').config();
 app.use(express.json())
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(cookieParser());
-// Set up CORS with credentials
-const corsOptions = {
-    origin: "https://frabjous-zuccutto-ea5552.netlify.app",
-    credentials: true,
-  };
-  
-  app.use(cors(corsOptions));
-  
-  // Add this line to enable credentials
-  app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Credentials", true);
-    next();
-  });
-  
+app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
 
-if(process.env.Node_ENV="production"){
-    app.use(express.static("frontend/build"))
-}
+
+// if(process.env.Node_ENV="production"){
+//     app.use(express.static("frontend/build"))
+// }
 
 //image upload
 const storage=multer.diskStorage({
