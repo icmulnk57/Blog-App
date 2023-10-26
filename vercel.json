@@ -1,0 +1,13 @@
+{
+    "builds": [
+      {
+        "src": "your-source-folder",
+        "use": "@vercel/static-build",
+        "config": {
+          "functions": "api",
+          "vite": true  
+        }
+      }
+    ]
+  }
+  
