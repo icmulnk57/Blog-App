@@ -23,7 +23,7 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(cookieParser());
 // Set up CORS with credentials
 const corsOptions = {
-    origin: "https://resonant-marshmallow-1cd1b7.netlify.app",
+    origin: "https://frabjous-zuccutto-ea5552.netlify.app",
     credentials: true,
   };
   
