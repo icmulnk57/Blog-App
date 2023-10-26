@@ -21,12 +21,20 @@ require('dotenv').config();
 app.use(express.json())
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(cookieParser());
-app.use(cors({origin:"https://resonant-marshmallow-1cd1b7.netlify.app",credentials:true}))
- // Add this line to enable credentials
- app.use(function (req, res, next) {
+// Set up CORS with credentials
+const corsOptions = {
+    origin: "https://resonant-marshmallow-1cd1b7.netlify.app",
+    credentials: true,
+  };
+  
+  app.use(cors(corsOptions));
+  
+  // Add this line to enable credentials
+  app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Credentials", true);
     next();
   });
+  
 
 if(process.env.Node_ENV="production"){
     app.use(express.static("frontend/build"))
