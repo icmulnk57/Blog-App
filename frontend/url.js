@@ -1,2 +1,2 @@
-export const URL=import.meta.env.VITE_URL
-export const IF=import.meta.env.VITE_IF
+export const URL="https://blog-backend-o898.onrender.com"
+export const IF="https://blog-backend-o898.onrender.com/images/"

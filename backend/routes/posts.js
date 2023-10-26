@@ -3,7 +3,7 @@ const { createPost, updatePost, deletePost, getPost, getSinglePost, getPostbyId 
 const verifyToken = require('../verifyToken');
 const router=express.Router();
 const cors=require('cors');
-router.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+router.use(cors({ origin: 'https://653a059c0211585997750503--ubiquitous-piroshki-f67569.netlify.app', credentials: true }));
 router.route('/create').post(verifyToken, createPost);
 router.route('/:id').put(verifyToken,updatePost);
 router.route('/:id').delete(verifyToken,deletePost);

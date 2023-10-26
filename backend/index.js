@@ -21,8 +21,8 @@ require('dotenv').config();
 app.use(express.json())
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(cookieParser());
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
-app.use('/api/refetch', cors({ origin: 'http://localhost:5173', credentials: true }));
+app.use(cors({ origin: 'https://653a059c0211585997750503--ubiquitous-piroshki-f67569.netlify.app', credentials: true }));
+app.use('/api/refetch', cors({ origin: 'https://653a059c0211585997750503--ubiquitous-piroshki-f67569.netlify.app', credentials: true }));
 
 
 // if(process.env.Node_ENV="production"){
