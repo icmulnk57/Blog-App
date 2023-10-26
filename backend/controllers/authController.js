@@ -53,7 +53,7 @@ exports.login=async(req,res)=>{
 
 exports.logout=async(req,res)=>{
     try{
-        res.clearCookie("token",{sameSite:"none",secure:true}).status(200).json("user logged out successfully");
+        res.clearCookie("token").status(200).json("user logged out successfully");
 
     }catch(err){
         res.status(500).json(err)

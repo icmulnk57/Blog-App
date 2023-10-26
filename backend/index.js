@@ -23,9 +23,9 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(cookieParser());
 app.use(cors({origin:"https://6539e7b3c8c9162cde672ad0--resonant-marshmallow-1cd1b7.netlify.app",credentials:true}))
 
-// if(process.env.Node_ENV="production"){
-//     app.use(express.static("frontend/build"))
-// }
+if(process.env.Node_ENV="production"){
+    app.use(express.static("frontend/build"))
+}
 
 //image upload
 const storage=multer.diskStorage({
