@@ -9,9 +9,11 @@ const cors=require('cors');
 
 //register
 router.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+
 router.route("/register").post(register);
 router.route("/login").post(login);
 router.route("/logout").get(logout);
+router.route('/api/refetch', cors({ origin: 'http://localhost:5173', credentials: true }));
 router.route("/refetch").get(refetch);
 
 
