@@ -29,47 +29,45 @@ const CreatePost = () => {
      setCats(updatedCats)
  }
 
- const handleCreate=async(e)=>{
-  e.preventDefault();
+ const handleCreate=async (e)=>{
+  e.preventDefault()
   const post={
     title,
     description,
     username:user.username,
     userId:user._id,
     categories:cats
-
   }
+
   if(file){
     const data=new FormData()
     const filename=Date.now()+file.name
-    data.append("img",filename);
+    data.append("img",filename)
     data.append("file",file)
     post.photo=filename
-
+    // console.log(data)
     //img upload
     try{
-      const imgUpload=await fetch(URL+"/api/upload",data);
-     
-      // console.log(imgUpload.data);
-  
-    }catch(err){
-      console.log(err);
+      const imgUpload=await axios.post(URL+"/api/upload",data)
+      // console.log(imgUpload.data)
+    }
+    catch(err){
+      console.log(err)
     }
   }
   //post upload
+  // console.log(post)
   try{
     const res=await axios.post(URL+"/api/posts/create",post,{withCredentials:true})
-    // console.log(res.data);
-    navigate("/posts/post/"+res.data._id);
-   
+    navigate("/posts/post/"+res.data._id)
+    // console.log(res.data)
 
-  }catch(err){
-    console.log(err);
   }
+  catch(err){
+    console.log(err)
+  }
+}
 
-  
-
- }
 
 
   return (

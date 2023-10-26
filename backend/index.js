@@ -21,26 +21,27 @@ require('dotenv').config();
 app.use(express.json())
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(cookieParser());
-app.use(cors({origin:"http://localhost:5173",credentials:true}))
-if(process.env.Node_ENV="production"){
-    app.use(express.static("frontend/build"))
-}
+app.use(cors({origin:"https://6539e7b3c8c9162cde672ad0--resonant-marshmallow-1cd1b7.netlify.app",credentials:true}))
+
+// if(process.env.Node_ENV="production"){
+//     app.use(express.static("frontend/build"))
+// }
 
 //image upload
-
-const  storage=multer.diskStorage({
+const storage=multer.diskStorage({
     destination:(req,file,fn)=>{
         fn(null,"images")
     },
     filename:(req,file,fn)=>{
         fn(null,req.body.img)
-        // fn(null,"image1.png")
+        // fn(null,"image1.jpg")
     }
 })
 
-const upload=multer({storage:storage});
-app.post('/api/upload',upload.single("file"),(req,res)=>{
-    res.status(200).json("image has been uploaded successfully!");
+const upload=multer({storage:storage})
+app.post("/api/upload",upload.single("file"),(req,res)=>{
+    // console.log(req.body)
+    res.status(200).json("Image has been uploaded successfully!")
 })
 
 
@@ -52,7 +53,7 @@ app.use("/api/user",authRoute);
 app.use("/api/user",userRoute);
 app.use("/api/posts",postRoute);
 app.use("/api/comments",commentRoute);
-app.use("/images",express.static(path.join(__dirname,"/images")));
+app.use("/images",express.static(path.join(__dirname,"/images")))
 
 
 
