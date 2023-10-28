@@ -7,7 +7,7 @@ const HomePost = ({post}) => {
       {/* left div */}
       <div className="w-[35%] h-[200px] flex justify-center items-center mb-4 ">
         {post.photo && (post.photo.endsWith(".jpg") || post.photo.endsWith(".png") || post.photo.endsWith(".jpeg")) ? (
-            <img src={IF + post.photo} alt="blog" className="w-full mx-auto mt-8" loading="lazy"/>
+            <img src={IF + post.photo} alt="blog" className="w-full mx-auto mt-8" loading="lazy"  width="400" height="300"/>
           ) : (
             <video controls className="w-full mx-auto mt-8">
               <source src={IF + post.photo} type="video/mp4" />
