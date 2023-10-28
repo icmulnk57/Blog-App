@@ -99,10 +99,10 @@ return (
                 <input onChange={(e)=>setEmail(e.target.value)}  value={email}  className="outline-none px-4 py-2 text-gray-500" type="text" placeholder="your email" />
                 {/* <input onChange={(e)=>setPassword(e.target.value)} value={password} className="outline-none px-4 py-2 text-gray-500" type="text" placeholder="your password" /> */}
                 <div className="flex items-center space-x-4 mt-8">
-                    <button onClick={handleProfileUpdate} className="text-white font-semibold bg-[#010a1f] px-4 py-2 hover:text-black hover:bg-gray-400">
+                    <button onClick={handleProfileUpdate} className="text-white font-semibold btn">
                         Update
                     </button>
-                    <button onClick={handleProfileDelete} className="text-white font-semibold bg-[#010a1f] px-4 py-2 hover:text-black hover:bg-gray-400">
+                    <button onClick={handleProfileDelete} className="text-white font-semibold btn">
                         Delete
                     </button>
                 </div>
