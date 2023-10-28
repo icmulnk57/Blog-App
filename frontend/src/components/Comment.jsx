@@ -1,4 +1,4 @@
-import React, { useContext, useEffect,useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { BiEdit } from 'react-icons/bi'
 import { MdDelete } from 'react-icons/md'
 import { URL } from '../../url'
@@ -10,15 +10,13 @@ const Comment = ({c,post}) => {
   const [isDeleting, setIsDeleting] = useState(false);
   const deleteComment=async(id)=>{
     try{
-      setIsDeleting(true);
+     
       await axios.delete(URL+`/api/comments/`+id,{withCredentials:true});
    
       
       
     }catch(err){
       console.log(err);
-    }finally {
-      setIsDeleting(false);
     }
   }
   
@@ -34,8 +32,8 @@ const Comment = ({c,post}) => {
           <div className="flex items-center justify-center space-x-2">
             <p
               className="cursor-pointer"
-              onClick={() => deleteComment(c?._id)}
-              disabled={isDeleting}
+              onClick={() => deleteComment(c._id)}
+              
             >
               <MdDelete />
             </p>
