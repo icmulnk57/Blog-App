@@ -27,9 +27,9 @@ const Navbar = () => {
       </h1>
      {
         path==="/" && <div className="flex justify-center items-center space-x-0">
-       
+       <p onClick={()=>navigate(prompt?"?search="+prompt:navigate('/'))} className="cursor-pointer"><BsSearch/></p>
        <input onChange={(e)=>setPrompt(e.target.value)} className="outline-none px-3 " placeholder="search post" type="text" />
-       <p onClick={()=>navigate(prompt?"?search="+prompt:navigate('/'))} className="cursor-pointer "><BsSearch/></p>
+       
 
      </div>
      }
