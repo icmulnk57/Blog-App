@@ -160,7 +160,7 @@ const postComment=async(e)=>{
             placeholder="write a comment"
             className="md:w-[80%] outline-none px-4 mt-4 md:mt-0"
           />
-          <button onClick={postComment} className="bg-[#010a1f]  text-white px-2 py-2 md:w-[20%] mt-4 md:mt-0">
+          <button onClick={postComment} className="btn px-2 py-2 md:w-[20%] mt-4 md:mt-0">
             Add Comment
           </button>
         </div>
