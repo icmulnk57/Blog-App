@@ -4,15 +4,17 @@ import { MdDelete } from 'react-icons/md'
 import { URL } from '../../url'
 import axios from 'axios'
 import { UserContext } from '../context/UserContext'
+import { useNavigate } from 'react-router-dom'
 
 
 const Comment = ({c,post}) => {
 
   const {user}=useContext(UserContext)
+  const navigate=useNavigate();
   const deleteComment=async(id)=>{
     try{
       await axios.delete(URL+"/api/comments/"+id,{withCredentials:true})
-      window.location.reload(true)
+      navigate('/');
     }
     catch(err){
       console.log(err)
