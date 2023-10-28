@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import axios from "axios";
 import { URL } from "../../url";
 import { UserContext } from "../context/UserContext";
+import "../custom.css"
 
 
 
@@ -46,17 +47,17 @@ const {setUser}=useContext(UserContext);
           </h1>
           <input
           onChange={(e)=>setEmail(e.target.value)}
-            className="w-full px-4 py-4 border-2 border-[#161c23] outline-0"
+            className="w-full px-4 py-4 border-2 border-[#000a2d] outline-0"
             placeholder="Enter your email"
             type="text"
           />
           <input
            onChange={(e)=>setPassword(e.target.value)}
-            className="w-full px-4 py-4 border-2 border-[#161c23] outline-0"
+            className="w-full px-4 py-4 border-2 border-[#000a2d] outline-0"
             placeholder="Enter your password"
             type="password"
           />
-          <button onClick={handleLogin} className="w-full px-4 py-4 text-lg font-bold text-white bg-[#161c23] rounded-lg hover:bg-gray-500 hover:text-black">
+          <button onClick={handleLogin} className="w-full px-4 py-4 text-lg font-bold text-white btn rounded-lg">
             Log in
           </button>
           {

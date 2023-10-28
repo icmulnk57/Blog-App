@@ -1,0 +1,26 @@
+.btn {
+    background: var(--gradientSupport);
+    color: var(--helper-thint);
+    transition: all .3s ease;
+  }
+ .btn:hover{
+    box-shadow: var(--shadowSupport);
+ } 
+  
+  :root {
+    --heading: rgb(0 10 45);
+    --para: #777777;
+    --para-tint: #e4e4;
+    --white: #ffff;
+    --black: #212529;
+    --helper: #8490ff;
+    --helper-thint: #f3f4ff;
+    --overlay: #3e64ff;
+    --bg: rgb(249 249 255);
+    --icons-bg: rgba(144,172,209,0.2);
+    --gradient: linear-gradient( 0deg, rgb(132 144 225) at 0%, rgb(98 189 252) 100% );
+    --gradientSupport: -webkit-linear-gradient( 0deg, rgb(132 144 225) 0%, rgb(98 189 252) 100% );
+    --shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
+    --shadowSupport: 0px 20px 20px 0px rgb(132 144 255 / 30%);
+  }
+  

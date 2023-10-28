@@ -95,7 +95,7 @@ const CreatePost = () => {
               />
               <div
                 onClick={addCategory}
-                className="bg-[#010a1f] text-white px-4 py-2 font-semibold cursor-pointer"
+                className="btn px-4 py-2 font-semibold cursor-pointer"
               >
                 Add
               </div>
@@ -109,7 +109,7 @@ const CreatePost = () => {
                   <p>{c}</p>
                   <p
                     onClick={()=>deleteCategory(i)}
-                    className="text-white bg-[#010a1f] rounded-full cursor-pointer p-1 text-sm">
+                    className="btn rounded-full cursor-pointer p-1 text-sm">
                     <ImCross />
                   </p>
                 </div>
@@ -123,7 +123,7 @@ const CreatePost = () => {
             className="px-4 py-2 outline-none"
             placeholder="Enter post description"
           />
-          <button onClick={handleCreate} className="bg-[#010a1f] w-full md:w-[20%] mx-auto text-white font-sans px-4 py-2 md:text-xl text-lg">
+          <button onClick={handleCreate} className="btn w-full md:w-[20%] mx-auto  font-sans px-4 py-2 md:text-xl text-lg">
             Create
           </button>
         </form>

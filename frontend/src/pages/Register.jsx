@@ -44,23 +44,23 @@ const handleRegister=async()=>{
       <h1 className="text-xl  text-[#010a1f] font-bold text-left">Create an account</h1>
       <input
       onChange={(e)=>setUsername(e.target.value)}
-        className="w-full px-4 py-4 border-2 border-[#010a1f] outline-0"
+        className="w-full px-4 py-4 border-2 border-[#000a2d] outline-0"
         placeholder="Enter your username"
         type="text"
       />
       <input
       onChange={(e)=>setEmail(e.target.value)}
-        className="w-full px-4 py-4 border-2 border-[#010a1f] outline-0"
+        className="w-full px-4 py-4 border-2 border-[#000a2d] outline-0"
         placeholder="Enter your email"
         type="text"
       />
       <input
       onChange={(e)=>setPassword(e.target.value)}
-        className="w-full px-4 py-4 border-2 border-[#010a1f] outline-0"
+        className="w-full px-4 py-4 border-2 border-[#000a2d] outline-0"
         placeholder="Enter your password"
         type="password"
       />
-      <button onClick={handleRegister} className="w-full px-4 py-4 text-lg font-bold text-white bg-[#010a1f] rounded-lg hover:bg-gray-500 hover:text-black">
+      <button onClick={handleRegister} className="w-full px-4 py-4 text-lg font-bold btn rounded-lg">
         Register
       </button>
       {
